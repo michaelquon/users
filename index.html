@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html>
-	<title>Users</title>
-    <head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="style.css">
-	<script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
-	<script>
-	$(document).ready(function(){
-		            
-		$('input').val("");
-		$('form').submit(function(){
-    	return false;
-		});
-		$(document).on('click', 'button.add', function() {
-			var firstName = $('#firstName').val();
-			var lastName = $('#lastName').val(); 
-			var email = $('#email').val(); 
-			var number = $('#number').val(); 
+	<head>
+		<title>Users</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+		<script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+		<script>
+		$(document).ready(function(){
+			            
+			$('input').val("");
+			$('form').submit(function(){
+	    	return false;
+			});
+			$(document).on('click', 'button.add', function() {
+				var firstName = $('#firstName').val();
+				var lastName = $('#lastName').val(); 
+				var email = $('#email').val(); 
+				var number = $('#number').val(); 
 
-		$('table').append("<tr><td>"+firstName+"</td>"+"<td>"+lastName+"</td>"+"<td>"+email+"</td>"+"<td>"+number+"</td></tr>");
-			document.getElementById('myForm').reset();
-		});
+			$('table').append("<tr><td>"+firstName+"</td>"+"<td>"+lastName+"</td>"+"<td>"+email+"</td>"+"<td>"+number+"</td></tr>");
+				document.getElementById('myForm').reset();
+			});
 
-	});
-	</script>
-	<title></title>
+		});
+		</script>
     </head> 
     <body>
 	<div class="container">
@@ -48,15 +47,15 @@
 			<form id="myForm">
 				<h2>Add User</h2>
 
-				<Label for="firstname">First name:</label>
-				<input type="text" id="firstName" placeholder="First Name"></Label></br>
-				<Label for="lastname">Last name:</label>
-				<input type="text" id="lastName" placeholder="Last Name"></br>
-				<Label for="email">Email Address:</label>
-				<input type="text" id="email" placeholder=" Email Address"></br>
-				<Label for="contact">Contact No.: </label>
-				<input type="text" id="number" placeholder="Contact #"></br>
-				<button type="submit"class="add">Add User</button>
+				<Label>First name:</label>
+				<input type="text" id="firstName" placeholder="First Name">
+				<Label>Last name:</label>
+				<input type="text" id="lastName" placeholder="Last Name">
+				<Label>Email Address:</label>
+				<input type="text" id="email" placeholder=" Email Address">
+				<Label>Contact No.: </label>
+				<input type="text" id="number" placeholder="Contact #">
+				<button type="submit" class="add">Add User</button>
 			</form>		
 			
 		</div>
